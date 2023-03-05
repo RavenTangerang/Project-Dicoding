@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Profile Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>  <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #222;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav li {
+        margin-right: 20px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.2s ease-in-out;
+      }
+
+      nav a:hover {
+        color: #f6c90e;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: space-between;
+      }
+
+      article {
+        flex: 2;
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin-right: 20px;
+      }
+
+      aside {
+        flex: 1;
+        background-color: #ddd;
+        padding: 20px;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      /* Media Queries */
+
+      @media screen and (max-width: 768px) {
+        main {
+          flex-direction: column;
+        }
+
+        article {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+
+        aside {
+          margin-top: 20px;
+        }
+      }</style>
+  </head>
+  <body>
+    <header>
+      <h1>Muhammad Fahri Ramadhan</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>About Me</h2>
+        <p>Halo, perkenalkan nama saya Muhammad Fahri Ramadhan. Saat ini saya sedang menempuh pendidikan di Universitas Esa Unggul dan sudah berada di semester 6. Saya memiliki ketertarikan yang tinggi dalam bidang teknologi informasi, sehingga saya sedang mengikuti bootcamp IT untuk menambah pengetahuan dan pengalaman di bidang tersebut.</p>
+        <p>Saya senang belajar hal-hal baru dan mengeksplorasi teknologi terkini, terutama dalam bidang web development dan data analysis. Saya juga terbuka untuk bekerja sama dengan orang-orang yang memiliki minat yang sama dalam mempelajari teknologi informasi.</p>
+        <p>Selain itu, saya juga memiliki keterampilan dalam bahasa pemrograman seperti HTML, CSS, JavaScript, dan Python. Selain itu, saya juga memiliki kemampuan dalam penggunaan software seperti Adobe Photoshop, Adobe Illustrator, dan Microsoft Office.</p>
+        <p>Terima kasih telah membaca sedikit tentang saya, saya harap kita bisa berkolaborasi dalam bidang teknologi informasi.</p>
+      </article>
+      <aside>
+        <img src="profile.jpg" alt="Muhammad Fahri Ramadhan">
+        <h3>Muhammad Fahri Ramadhan</h3>
+        <p style="text-align: center;">Tangerang 26-Januari-1998</p>
+	  <p style="text-align: center;">Mahasiswa</p>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; 2023 Muhammad Fahri Ramadhan</p>
+    </footer>
+    <script>
+      const navLinks = document.querySelectorAll("nav ul li a");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const targetId = event.target.getAttribute("href").slice(1);
+          const targetElement = document.getElementById(targetId);
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
